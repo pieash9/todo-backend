@@ -1,6 +1,5 @@
-// api/graphql.ts
 import { ApolloServer } from "apollo-server-micro";
-import { typeDefs, resolvers } from "../src/graphql"; // Adjust this path as needed
+import { typeDefs, resolvers } from "../src/graphql"; // adjust if needed
 import { IncomingMessage, ServerResponse } from "http";
 
 const server = new ApolloServer({ typeDefs, resolvers });
@@ -11,7 +10,7 @@ export default async function handler(
   res: ServerResponse
 ) {
   await startServer;
-  return server.createHandler()(req, res);
+  return server.createHandler()(req, res); // no path needed
 }
 
 export const config = {

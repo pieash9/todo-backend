@@ -1,5 +1,9 @@
 {
   "version": 2,
-  "builds": [{ "src": "api/graphql.ts", "use": "@vercel/node" }],
-  "routes": [{ "src": "/api/graphql", "dest": "api/graphql.ts" }]
+  "functions": {
+    "api/graphql.ts": {
+      "runtime": "vercel-node@canary"
+    }
+  },
+  "routes": [{ "src": "/api/graphql", "dest": "/api/graphql.ts" }]
 }

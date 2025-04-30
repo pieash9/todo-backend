@@ -10,7 +10,9 @@ export default async function handler(
   res: ServerResponse
 ) {
   await startServer;
-  return server.createHandler()(req, res); // no path needed
+  return server.createHandler({
+    path: "/api/graphql",
+  })(req, res); // no path needed
 }
 
 export const config = {

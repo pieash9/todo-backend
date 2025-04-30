@@ -1,9 +1,4 @@
 {
   "version": 2,
-  "functions": {
-    "api/graphql.ts": {
-      "runtime": "vercel-node@canary"
-    }
-  },
   "routes": [{ "src": "/api/graphql", "dest": "/api/graphql.ts" }]
 }
